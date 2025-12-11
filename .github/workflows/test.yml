@@ -1,0 +1,136 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  SCHEME: Library
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "16.4"
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Run SwiftLint
+        run: make lint
+
+  test:
+    name: ${{ matrix.device }} Xcode ${{ matrix.xcode }}
+    runs-on: macos-15
+    strategy:
+      fail-fast: false
+      matrix:
+        xcode: ["16.4"]
+        device:
+          [
+            "iPhone 16 Pro",
+            "iPhone 16"
+          ]
+        ios: ["18.5"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Xcode ${{ matrix.xcode }}
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: ${{ matrix.xcode }}
+
+      - name: Verify Xcode version
+        run: xcodebuild -version
+
+      - name: Build Library
+        run: make library DESTINATION="platform=iOS Simulator,name=${{ matrix.device }},OS=${{ matrix.ios }}"
+
+      - name: Start Signing Server
+        run: |
+          make signing-server-start
+          sleep 5
+
+      - name: Wait for Server to be Ready
+        run: make signing-server-wait
+
+      - name: Verify Server Endpoints
+        run: make signing-server-verify
+
+      - name: Build & Test
+        run: |
+          set -o pipefail
+          echo "CI environment variable: true"
+          echo "Testing with server at http://127.0.0.1:8080"
+          TEST_RUNNER_CI=true make test-library DESTINATION="platform=iOS Simulator,name=${{ matrix.device }},OS=${{ matrix.ios }}"
+
+      - name: Generate test summary
+        if: always()
+        run: make test-summary
+
+      - name: Upload test summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestSummary-${{ matrix.xcode }}-${{ matrix.device }}
+          path: |
+            TestResults.xcresult
+          if-no-files-found: warn
+
+      - name: Export coverage LCOV
+        if: success()
+        run: |
+          make coverage-lcov
+          # Also keep the JSON for better Codecov support
+          if [ -f "coverage.json" ]; then
+            echo "Coverage JSON found ($(wc -c < coverage.json) bytes)"
+          fi
+          if [ -f "coverage.lcov" ]; then
+            echo "Coverage LCOV found ($(wc -c < coverage.lcov) bytes)"
+            # Create a copy with device/xcode info
+            SANITIZED_DEVICE=$(echo "${{ matrix.device }}" | tr ' ()' '---')
+            cp coverage.lcov "coverage-${{ matrix.xcode }}-${SANITIZED_DEVICE}.lcov"
+          fi
+
+      - name: Upload coverage report to GitHub
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.xcode }}-${{ matrix.device }}
+          path: |
+            coverage.lcov
+            coverage.json
+            coverage-*.lcov
+          if-no-files-found: warn
+
+      - name: Upload coverage report to Codecov
+        if: success()
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: contentauth/c2pa-ios
+          files: ./coverage.lcov,./coverage.json
+          flags: unittests
+          name: c2pa-ios-${{ matrix.device }}
+          fail_ci_if_error: false
+          verbose: true
+
+      - name: Stop Signing Server
+        if: always()
+        run: make signing-server-stop || true
+
+      - name: Upload Server Logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-logs-${{ matrix.xcode }}-${{ matrix.device }}
+          path: signing-server.log

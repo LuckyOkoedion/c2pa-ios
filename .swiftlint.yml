@@ -1,0 +1,97 @@
+# SwiftLint configuration for C2PA iOS
+
+# Include only these paths
+included:
+  - Library/Sources
+  - ExampleApp/Sources
+  - TestApp/Sources
+  - TestShared/Sources
+  - SigningServer/Sources
+
+excluded:
+  - SigningServer/Sources/C2PA
+  - SigningServer/Sources/C2PAC
+
+# Disable specific rules
+disabled_rules:
+  - file_length
+  - type_body_length
+  - function_body_length
+  - cyclomatic_complexity
+  - todo
+  - force_cast
+  - force_try
+  - nesting
+  - line_length
+  - opening_brace
+
+# Configure specific rules
+opt_in_rules:
+  - empty_count
+  - closure_spacing
+  - contains_over_first_not_nil
+  - explicit_init
+  - first_where
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_outlet
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - yoda_condition
+
+# Rule configurations
+line_length:
+  error: 120
+  ignores_comments: true
+  ignores_urls: true
+
+identifier_name:
+  min_length:
+    warning: 1
+    error: 1
+  max_length:
+    warning: 50
+  excluded:
+    - id
+    - URL
+    - url
+    - key
+    - iv
+    - i
+    - j
+    - k
+    - x
+    - y
+    - z
+    - p
+    - s
+    - r
+    - w
+    - b
+    - v
+    - f
+    - m
+    - n
+    - e
+  allowed_symbols: ["_"]
+  validates_start_with_lowercase: true
+
+type_name:
+  min_length:
+    warning: 3
+  max_length:
+    warning: 50
+
+function_parameter_count:
+  warning: 8
+  error: 10
+
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+trailing_comma:
+  mandatory_comma: false
+
+vertical_whitespace:
+  max_empty_lines: 2

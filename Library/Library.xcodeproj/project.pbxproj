@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A1234561234567890ABCDEF /* C2PA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1234551234567890ABCDEF /* C2PA.swift */; };
+		8A1234581234567890ABCDEF /* CertificateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1234571234567890ABCDEF /* CertificateManager.swift */; };
+		953415F32E6EB31400A97957 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 953415F12E6EB31400A97957 /* Base.xcconfig */; };
+		9534697E2E4CB081003E83AD /* X509 in Frameworks */ = {isa = PBXBuildFile; productRef = 9534697D2E4CB081003E83AD /* X509 */; };
+		953469812E4CB0A8003E83AD /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 953469802E4CB0A8003E83AD /* Crypto */; };
+		953469832E4CB0A8003E83AD /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 953469822E4CB0A8003E83AD /* _CryptoExtras */; };
+		953469862E4CB0CE003E83AD /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 953469852E4CB0CE003E83AD /* Logging */; };
+		953469892E4CB10A003E83AD /* SwiftASN1 in Frameworks */ = {isa = PBXBuildFile; productRef = 953469882E4CB10A003E83AD /* SwiftASN1 */; };
+		953469DD2E4D2578003E83AD /* C2PA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1234501234567890ABCDEF /* C2PA.framework */; };
+		953469E62E4D25C6003E83AD /* TestShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953469E52E4D25C6003E83AD /* TestShared.framework */; };
+		959C8A3A2E4E3C0000FBD820 /* C2PAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959C8A2E2E4E38E700FBD820 /* C2PAC.framework */; };
+		95A7823D2E6F06E4001E9748 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A782322E6F06E4001E9748 /* Builder.swift */; };
+		95A7823E2E6F06E4001E9748 /* KeychainSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A782352E6F06E4001E9748 /* KeychainSigner.swift */; };
+		95A7823F2E6F06E4001E9748 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A782382E6F06E4001E9748 /* Signer.swift */; };
+		95A782402E6F06E4001E9748 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A782362E6F06E4001E9748 /* Reader.swift */; };
+		95A782412E6F06E4001E9748 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A782342E6F06E4001E9748 /* Helpers.swift */; };
+		95A782422E6F06E4001E9748 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7823A2E6F06E4001E9748 /* Stream.swift */; };
+		95A782432E6F06E4001E9748 /* SigningAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A782392E6F06E4001E9748 /* SigningAlgorithm.swift */; };
+		95A782442E6F06E4001E9748 /* WebServiceSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7823B2E6F06E4001E9748 /* WebServiceSigner.swift */; };
+		95A782452E6F06E4001E9748 /* SecureEnclaveSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A782372E6F06E4001E9748 /* SecureEnclaveSigner.swift */; };
+		95C99A6E2E69717700C54D0E /* LibraryTestRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C99A6B2E69717700C54D0E /* LibraryTestRunner.swift */; };
+		95C99A6F2E69717700C54D0E /* LibraryTests.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 95C99A6C2E69717700C54D0E /* LibraryTests.xctestplan */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		953469DE2E4D2578003E83AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A1234461234567890ABCDEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A12344E1234567890ABCDEF;
+			remoteInfo = C2PA;
+		};
+		959C8A392E4E3B0000FBD820 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A1234461234567890ABCDEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 959C8A2D2E4E38E700FBD820;
+			remoteInfo = C2PAC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A1234501234567890ABCDEF /* C2PA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = C2PA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1234551234567890ABCDEF /* C2PA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C2PA.swift; sourceTree = "<group>"; };
+		8A1234571234567890ABCDEF /* CertificateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateManager.swift; sourceTree = "<group>"; };
+		953415F12E6EB31400A97957 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		953469D92E4D2578003E83AD /* C2PATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = C2PATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953469E52E4D25C6003E83AD /* TestShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		959C8A2E2E4E38E700FBD820 /* C2PAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = C2PAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A782322E6F06E4001E9748 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		95A782342E6F06E4001E9748 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		95A782352E6F06E4001E9748 /* KeychainSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSigner.swift; sourceTree = "<group>"; };
+		95A782362E6F06E4001E9748 /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		95A782372E6F06E4001E9748 /* SecureEnclaveSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclaveSigner.swift; sourceTree = "<group>"; };
+		95A782382E6F06E4001E9748 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
+		95A782392E6F06E4001E9748 /* SigningAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningAlgorithm.swift; sourceTree = "<group>"; };
+		95A7823A2E6F06E4001E9748 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		95A7823B2E6F06E4001E9748 /* WebServiceSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceSigner.swift; sourceTree = "<group>"; };
+		95C99A6B2E69717700C54D0E /* LibraryTestRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTestRunner.swift; sourceTree = "<group>"; };
+		95C99A6C2E69717700C54D0E /* LibraryTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LibraryTests.xctestplan; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A12344F1234567890ABCDEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959C8A3A2E4E3C0000FBD820 /* C2PAC.framework in Frameworks */,
+				9534697E2E4CB081003E83AD /* X509 in Frameworks */,
+				953469812E4CB0A8003E83AD /* Crypto in Frameworks */,
+				953469862E4CB0CE003E83AD /* Logging in Frameworks */,
+				953469892E4CB10A003E83AD /* SwiftASN1 in Frameworks */,
+				953469832E4CB0A8003E83AD /* _CryptoExtras in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953469D62E4D2578003E83AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953469DD2E4D2578003E83AD /* C2PA.framework in Frameworks */,
+				953469E62E4D25C6003E83AD /* TestShared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A1234491234567890ABCDEF = {
+			isa = PBXGroup;
+			children = (
+				953415F22E6EB31400A97957 /* Configurations */,
+				8A1234541234567890ABCDEF /* Sources */,
+				95C99A6D2E69717700C54D0E /* Tests */,
+				9534698A2E4CB13B003E83AD /* Frameworks */,
+				8A1234511234567890ABCDEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A1234511234567890ABCDEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A1234501234567890ABCDEF /* C2PA.framework */,
+				953469D92E4D2578003E83AD /* C2PATests.xctest */,
+				959C8A2E2E4E38E700FBD820 /* C2PAC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A1234541234567890ABCDEF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8A1234551234567890ABCDEF /* C2PA.swift */,
+				95A782322E6F06E4001E9748 /* Builder.swift */,
+				8A1234571234567890ABCDEF /* CertificateManager.swift */,
+				95A782342E6F06E4001E9748 /* Helpers.swift */,
+				95A782352E6F06E4001E9748 /* KeychainSigner.swift */,
+				95A782362E6F06E4001E9748 /* Reader.swift */,
+				95A782372E6F06E4001E9748 /* SecureEnclaveSigner.swift */,
+				95A782382E6F06E4001E9748 /* Signer.swift */,
+				95A782392E6F06E4001E9748 /* SigningAlgorithm.swift */,
+				95A7823A2E6F06E4001E9748 /* Stream.swift */,
+				95A7823B2E6F06E4001E9748 /* WebServiceSigner.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		953415F22E6EB31400A97957 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				953415F12E6EB31400A97957 /* Base.xcconfig */,
+			);
+			name = Configurations;
+			path = ../Configurations;
+			sourceTree = SOURCE_ROOT;
+		};
+		9534698A2E4CB13B003E83AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				953469E52E4D25C6003E83AD /* TestShared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95C99A6D2E69717700C54D0E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				95C99A6B2E69717700C54D0E /* LibraryTestRunner.swift */,
+				95C99A6C2E69717700C54D0E /* LibraryTests.xctestplan */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8A12344D1234567890ABCDEF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8A12344E1234567890ABCDEF /* C2PA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A1234661234567890ABCDEF /* Build configuration list for PBXNativeTarget "C2PA" */;
+			buildPhases = (
+				8A12344B1234567890ABCDEF /* Sources */,
+				8A12344F1234567890ABCDEF /* Frameworks */,
+				8A12344D1234567890ABCDEF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				959C8A382E4E3B0000FBD820 /* PBXTargetDependency */,
+			);
+			name = C2PA;
+			productName = C2PA;
+			productReference = 8A1234501234567890ABCDEF /* C2PA.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		953469D82E4D2578003E83AD /* C2PATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953469E22E4D2578003E83AD /* Build configuration list for PBXNativeTarget "C2PATests" */;
+			buildPhases = (
+				953469D52E4D2578003E83AD /* Sources */,
+				953469D62E4D2578003E83AD /* Frameworks */,
+				953469D72E4D2578003E83AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953469DF2E4D2578003E83AD /* PBXTargetDependency */,
+			);
+			name = C2PATests;
+			packageProductDependencies = (
+			);
+			productName = LibraryTests;
+			productReference = 953469D92E4D2578003E83AD /* C2PATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		959C8A2D2E4E38E700FBD820 /* C2PAC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 959C8A342E4E38E700FBD820 /* Build configuration list for PBXNativeTarget "C2PAC" */;
+			buildPhases = (
+				959C8A372E4E3A0000FBD820 /* Download and Setup C2PA Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = C2PAC;
+			packageProductDependencies = (
+			);
+			productName = C2PAC;
+			productReference = 959C8A2E2E4E38E700FBD820 /* C2PAC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A1234461234567890ABCDEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					8A12344E1234567890ABCDEF = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
+					953469D82E4D2578003E83AD = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					959C8A2D2E4E38E700FBD820 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = 5D41F27C216F41AC99081BE0 /* Build configuration list for PBXProject "Library" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A1234491234567890ABCDEF;
+			packageReferences = (
+				9534697C2E4CB081003E83AD /* XCRemoteSwiftPackageReference "swift-certificates" */,
+				9534697F2E4CB0A8003E83AD /* XCRemoteSwiftPackageReference "swift-crypto" */,
+				953469842E4CB0CE003E83AD /* XCRemoteSwiftPackageReference "swift-log" */,
+				953469872E4CB10A003E83AD /* XCRemoteSwiftPackageReference "swift-asn1" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8A1234511234567890ABCDEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A12344E1234567890ABCDEF /* C2PA */,
+				953469D82E4D2578003E83AD /* C2PATests */,
+				959C8A2D2E4E38E700FBD820 /* C2PAC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		953469D72E4D2578003E83AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C99A6F2E69717700C54D0E /* LibraryTests.xctestplan in Resources */,
+				953415F32E6EB31400A97957 /* Base.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		959C8A372E4E3A0000FBD820 /* Download and Setup C2PA Libraries */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Download and Setup C2PA Libraries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(PRODUCT_NAME).framework/.stamp",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\nset -e\n\necho \"C2PAC Framework Builder\"\necho \"=======================\"\n\n# Use build settings from Base.xcconfig (loaded by Xcode)\n# These are now available as environment variables\nGITHUB_ORG=\"${GITHUB_ORG:-contentauth}\"\nC2PA_VERSION=\"${C2PA_VERSION:-v0.58.0}\"\n\necho \"Version: ${C2PA_VERSION}\"\necho \"GitHub Org: ${GITHUB_ORG}\"\necho \"Platform: ${PLATFORM_NAME}\"\necho \"Target Build Dir: ${TARGET_BUILD_DIR}\"\n\n# Setup directories\nFRAMEWORK_DIR=\"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.framework\"\nDOWNLOAD_DIR=\"${TEMP_DIR}/C2PAC-Downloads\"\nmkdir -p \"${DOWNLOAD_DIR}\"\nmkdir -p \"${FRAMEWORK_DIR}\"\n\n# Determine which library to download based on platform\nif [ \"${PLATFORM_NAME}\" = \"iphoneos\" ]; then\n    ARCH_SUFFIX=\"aarch64-apple-ios\"\n    ARCH_DIR=\"arm64\"\nelif [ \"${PLATFORM_NAME}\" = \"iphonesimulator\" ]; then\n    # For simulator, we need both x86_64 and arm64, then lipo them\n    NEEDS_LIPO=true\nelse\n    echo \"Unsupported platform: ${PLATFORM_NAME}\"\n    exit 1\nfi\n\n# Download function\ndownload_and_extract() {\n    local suffix=\"$1\"\n    local output_dir=\"$2\"\n    \n    echo \"  • Downloading ${suffix}...\"\n    curl -sL \"https://github.com/${GITHUB_ORG}/c2pa-rs/releases/download/c2pa-${C2PA_VERSION}/c2pa-${C2PA_VERSION}-${suffix}.zip\" \\\n        -o \"${DOWNLOAD_DIR}/${suffix}.zip\"\n    \n    mkdir -p \"${DOWNLOAD_DIR}/${suffix}\"\n    unzip -q -o \"${DOWNLOAD_DIR}/${suffix}.zip\" -d \"${DOWNLOAD_DIR}/${suffix}\"\n    \n    cp \"${DOWNLOAD_DIR}/${suffix}/lib/libc2pa_c.a\" \"${output_dir}/libc2pa_c.a\"\n    \n    # Copy and patch header\n    if [ ! -f \"${FRAMEWORK_DIR}/Headers/c2pa.h\" ]; then\n        mkdir -p \"${FRAMEWORK_DIR}/Headers\"\n        # Patch the header to fix Swift compatibility\n        sed 's/typedef struct C2paSigner C2paSigner;/typedef struct C2paSigner { } C2paSigner;/g' \\\n            \"${DOWNLOAD_DIR}/${suffix}/include/c2pa.h\" > \"${FRAMEWORK_DIR}/Headers/c2pa.h\"\n    fi\n}\n\n# Download appropriate libraries\nif [ \"${NEEDS_LIPO}\" = \"true\" ]; then\n    # Simulator needs both architectures\n    echo \"Building universal simulator library...\"\n    \n    mkdir -p \"${DOWNLOAD_DIR}/x86_64\"\n    mkdir -p \"${DOWNLOAD_DIR}/arm64-sim\"\n    \n    download_and_extract \"x86_64-apple-ios\" \"${DOWNLOAD_DIR}/x86_64\"\n    download_and_extract \"aarch64-apple-ios-sim\" \"${DOWNLOAD_DIR}/arm64-sim\"\n    \n    # Create fat library\n    lipo -create \\\n        \"${DOWNLOAD_DIR}/x86_64/libc2pa_c.a\" \\\n        \"${DOWNLOAD_DIR}/arm64-sim/libc2pa_c.a\" \\\n        -output \"${FRAMEWORK_DIR}/C2PAC\"\nelse\n    # Device - single architecture\n    echo \"Building device library...\"\n    mkdir -p \"${DOWNLOAD_DIR}/device\"\n    download_and_extract \"${ARCH_SUFFIX}\" \"${DOWNLOAD_DIR}/device\"\n    cp \"${DOWNLOAD_DIR}/device/libc2pa_c.a\" \"${FRAMEWORK_DIR}/C2PAC\"\nfi\n\n# Create module map\nmkdir -p \"${FRAMEWORK_DIR}/Modules\"\ncat > \"${FRAMEWORK_DIR}/Modules/module.modulemap\" << EOF\nframework module C2PAC {\n    header \"c2pa.h\"\n    export *\n}\nEOF\n\n# Create Info.plist\ncat > \"${FRAMEWORK_DIR}/Info.plist\" << EOF\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n    <key>CFBundleIdentifier</key>\n    <string>org.contentauth.C2PAC</string>\n    <key>CFBundleName</key>\n    <string>C2PAC</string>\n    <key>CFBundleExecutable</key>\n    <string>C2PAC</string>\n    <key>CFBundleVersion</key>\n    <string>1.0</string>\n    <key>CFBundleShortVersionString</key>\n    <string>1.0</string>\n    <key>MinimumOSVersion</key>\n    <string>16.0</string>\n</dict>\n</plist>\nEOF\n\n# Create stamp file for build system\ntouch \"${FRAMEWORK_DIR}/.stamp\"\n\necho \"✓ C2PAC framework built successfully at ${FRAMEWORK_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A12344B1234567890ABCDEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A7823D2E6F06E4001E9748 /* Builder.swift in Sources */,
+				95A7823E2E6F06E4001E9748 /* KeychainSigner.swift in Sources */,
+				95A7823F2E6F06E4001E9748 /* Signer.swift in Sources */,
+				95A782402E6F06E4001E9748 /* Reader.swift in Sources */,
+				95A782412E6F06E4001E9748 /* Helpers.swift in Sources */,
+				95A782422E6F06E4001E9748 /* Stream.swift in Sources */,
+				95A782432E6F06E4001E9748 /* SigningAlgorithm.swift in Sources */,
+				95A782442E6F06E4001E9748 /* WebServiceSigner.swift in Sources */,
+				95A782452E6F06E4001E9748 /* SecureEnclaveSigner.swift in Sources */,
+				8A1234561234567890ABCDEF /* C2PA.swift in Sources */,
+				8A1234581234567890ABCDEF /* CertificateManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		953469D52E4D2578003E83AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C99A6E2E69717700C54D0E /* LibraryTestRunner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		953469DF2E4D2578003E83AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A12344E1234567890ABCDEF /* C2PA */;
+			targetProxy = 953469DE2E4D2578003E83AD /* PBXContainerItemProxy */;
+		};
+		959C8A382E4E3B0000FBD820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 959C8A2D2E4E38E700FBD820 /* C2PAC */;
+			targetProxy = 959C8A392E4E3B0000FBD820 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8A12345A1234567890ABCDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953415F12E6EB31400A97957 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A12345B1234567890ABCDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A1234691234567890ABCDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953415F12E6EB31400A97957 /* Base.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.contentauth.C2PA;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A12346A1234567890ABCDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.contentauth.C2PA;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		953469E02E4D2578003E83AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953415F12E6EB31400A97957 /* Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.contentauth.LibraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		953469E12E4D2578003E83AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.contentauth.LibraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		959C8A352E4E38E700FBD820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953415F12E6EB31400A97957 /* Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.contentauth.C2PAC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		959C8A362E4E38E700FBD820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = org.contentauth.C2PAC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D41F27C216F41AC99081BE0 /* Build configuration list for PBXProject "Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A12345A1234567890ABCDEF /* Debug */,
+				8A12345B1234567890ABCDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A1234661234567890ABCDEF /* Build configuration list for PBXNativeTarget "C2PA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1234691234567890ABCDEF /* Debug */,
+				8A12346A1234567890ABCDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		953469E22E4D2578003E83AD /* Build configuration list for PBXNativeTarget "C2PATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953469E02E4D2578003E83AD /* Debug */,
+				953469E12E4D2578003E83AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		959C8A342E4E38E700FBD820 /* Build configuration list for PBXNativeTarget "C2PAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				959C8A352E4E38E700FBD820 /* Debug */,
+				959C8A362E4E38E700FBD820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9534697C2E4CB081003E83AD /* XCRemoteSwiftPackageReference "swift-certificates" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-certificates.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.0;
+			};
+		};
+		9534697F2E4CB0A8003E83AD /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.14.0;
+			};
+		};
+		953469842E4CB0CE003E83AD /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.4;
+			};
+		};
+		953469872E4CB10A003E83AD /* XCRemoteSwiftPackageReference "swift-asn1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-asn1.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9534697D2E4CB081003E83AD /* X509 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9534697C2E4CB081003E83AD /* XCRemoteSwiftPackageReference "swift-certificates" */;
+			productName = X509;
+		};
+		953469802E4CB0A8003E83AD /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9534697F2E4CB0A8003E83AD /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+		953469822E4CB0A8003E83AD /* _CryptoExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9534697F2E4CB0A8003E83AD /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = _CryptoExtras;
+		};
+		953469852E4CB0CE003E83AD /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953469842E4CB0CE003E83AD /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		953469882E4CB10A003E83AD /* SwiftASN1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953469872E4CB10A003E83AD /* XCRemoteSwiftPackageReference "swift-asn1" */;
+			productName = SwiftASN1;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8A1234461234567890ABCDEF /* Project object */;
+}

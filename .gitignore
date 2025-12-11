@@ -1,0 +1,60 @@
+# Build artifacts
+Build/
+Library/Build/
+Library/output/
+output/
+Library/Frameworks/
+SigningServer/Build/
+.build/
+DerivedData/
+
+# Dependency directories
+Pods/
+
+# Build and external dependencies
+*.a
+*.o
+*.dylib
+
+# C2PA specific
+*.xcframework
+*.xcframework.zip
+
+# OSX
+.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# Makefile temp files
+*.bak
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+
+# Signing server runtime files
+SigningServer/Sources/C2PAC/*
+SigningServer/Sources/C2PA/*
+
+# Test and coverage artifacts
+TestResults.xcresult/
+coverage.json
+coverage.lcov
+coverage.txt
+coverage-*.lcov
+signing-server.log
+test-results.json

@@ -1,0 +1,15 @@
+// Base.xcconfig
+// This file contains shared settings used across all targets and build scripts
+
+// The version of the C2PA Rust library to download from GitHub releases
+C2PA_VERSION = v0.72.0
+
+// GitHub organization that hosts the C2PA releases
+GITHUB_ORG = contentauth
+
+// Server base URL for the C2PA signing server, needs to start
+// with 'https:/$()/' to avoid being treated as a comment
+SIGNING_SERVER_URL = https:/$()/your-signing-server-url:8080
+
+// Bearer token for authenticating with the C2PA signing server
+SIGNING_SERVER_TOKEN = test-bearer-token-12345
