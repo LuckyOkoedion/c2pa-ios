@@ -3,7 +3,6 @@ Build/
 Library/Build/
 Library/output/
 output/
-Library/Frameworks/
 SigningServer/Build/
 .build/
 DerivedData/
@@ -12,13 +11,10 @@ DerivedData/
 Pods/
 
 # Build and external dependencies
-*.a
 *.o
 *.dylib
 
 # C2PA specific
-*.xcframework
-*.xcframework.zip
 
 # OSX
 .DS_Store

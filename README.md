@@ -7,6 +7,14 @@
 
 This project provides iOS bindings to the [C2PA](https://c2pa.org/) (Content Authenticity Initiative) libraries. It wraps the C2PA Rust implementation ([c2pa-rs](https://github.com/contentauth/c2pa-rs)) using its C API bindings.
 
+> [!IMPORTANT]
+> **Modified Fork with Bundled Binary**
+> This fork (`github.com/LuckyOkoedion/c2pa-ios`) differs from upstream:
+> 1.  **Bundled Binary:** It contains a custom-built `C2PAC.xcframework` inside the repository, ignoring the release-download mechanism.
+> 2.  **Patched Core:** The binary is built from `c2pa-rs` v0.33.0+ (fixing the MP4 memory crash).
+> 3.  **Untrusted Certs:** The binary forcefully enables `C2PA_ALLOW_UNTRUSTED=1` to support self-signed certificates (fixing silent JPEG failures).
+> 4.  **Package.swift:** Modified to point to the local `Library/Frameworks/C2PAC.xcframework`.
+
 ## Overview
 
 C2PA iOS offers:
