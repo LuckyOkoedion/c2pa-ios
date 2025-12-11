@@ -4,6 +4,8 @@ Library/Build/
 Library/output/
 output/
 SigningServer/Build/
+Library/Frameworks/C2PAC.framework
+Library/Frameworks/C2PAC.xcframework
 .build/
 DerivedData/
 

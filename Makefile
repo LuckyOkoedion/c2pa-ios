@@ -115,7 +115,8 @@ publish: library
 ios-framework:
 	@echo "Building iOS XCFramework for device and simulator..."
 	@# Get the build root before building
-	@SYMROOT=$$(xcodebuild -workspace C2PA.xcworkspace -scheme Library -showBuildSettings 2>/dev/null | grep "^    SYMROOT = " | head -1 | sed 's/.*SYMROOT = //'); \
+	@set -e; \
+	SYMROOT=$$(xcodebuild -workspace C2PA.xcworkspace -scheme Library -showBuildSettings 2>/dev/null | grep "^    SYMROOT = " | head -1 | sed 's/.*SYMROOT = //'); \
 	echo "Build root: $$SYMROOT"; \
 	\
 	echo "Building for iOS device..."; \
